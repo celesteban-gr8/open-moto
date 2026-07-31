@@ -29,7 +29,7 @@ const CONFIG = {
   // ── Recipient Info ────────────────────────────────────────────
   name: "Keziah Blest !",
   photo: "./img/pretty.jpg",       // Place your photo in the img/ folder
-  music: "./music/hbd.mpeg",      // Place your music in the music/ folder
+  music: "./music/daylight.mpeg",      // Place your music in the music/ folder
 
   // ── Theme Colors ──────────────────────────────────────────────
   // A toggle button lets the viewer switch between dark & light mode.
@@ -56,21 +56,34 @@ const CONFIG = {
     {
       type: "greeting",
       title: "Hi ",
-      subtitle: "I always like that name because it's unique ya know",
+      subtitle: "I always like that name because it's unique ya know because it's not common and forgettable.",
     },
     {
       type: "countdown",
       from: 3,                    // Countdown from this number
-      goText: "🎉",              // Text shown after countdown ends
+      goText: "🥳",               // Text shown after countdown ends
     },
+
+    {
+      type: "profile",
+      photo: "./img/pretty2.jpg",
+    },
+
+    {
+  type: "fireworks2",
+  count: 60,
+  bursts: 6,
+},
+
     {
       type: "announcement",
       text: "It's your birthday!! :D",
     },
+    
     {
       type: "chatbox",
       message:
-        "Happy birthday to youu!! Wishing you a wonderful year ahead filled with joy, love, and endless happiness!",
+        "Happy birthday to you baba!! I hope that your day fills with happiness and today reminds you of how loved, special you are. May this year not be so harsh on you!",
       buttonText: "Send",
     },
     {
@@ -79,7 +92,7 @@ const CONFIG = {
         "That's what I was going to do.",
         "But then I stopped.",
         "I realised, I wanted to do something <strong>special</strong>.",
-        "Because,",
+        "For you because... ",
         "You are Special <span>:)</span>",
       ],
       bigLetters: "SO",
@@ -99,9 +112,13 @@ const CONFIG = {
     },
     {
       type: "profile",
-      wishTitle: "Happy Birthday!",
-      wishText: "May the js.prototypes always be with you! ;)",
     },
+    {
+      type: "confetti2",
+      wishTitle: "Happy Birthday!",
+      wishText: "May today remind you that your presence has always been a gift, long before anyone wrapped one for you -cel ;)",
+    },
+
     {
       type: "fireworks",
       count: 24,
@@ -112,7 +129,7 @@ const CONFIG = {
     },
     {
       type: "closing",
-      text: "Okay, now come back and tell me if you liked it.",
+      text: "I hope you like it baba hehe, labyow.",
       replayText: "Or click, if you want to watch it again.",
     },
   ],

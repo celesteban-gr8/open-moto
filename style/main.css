@@ -294,6 +294,21 @@ body {
   border-radius: 50%;
 }
 
+.firework-group {
+  position: absolute;
+  inset: 0;
+}
+
+.firework-rocket {
+  position: absolute;
+  bottom: 0;
+  width: 3px;
+  height: 20px;
+  background: linear-gradient(to top, var(--accent), transparent);
+  border-radius: 2px;
+  opacity: 0;
+}
+
 /* ── Balloons ──────────────────────────────────────────────────── */
 .section-balloons {
   position: fixed !important;
@@ -370,6 +385,14 @@ body {
   position: absolute;
   width: 20px;
   visibility: hidden;
+}
+
+.confetti2-canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* ── Closing ───────────────────────────────────────────────────── */

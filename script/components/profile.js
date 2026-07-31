@@ -3,17 +3,18 @@
 
   window.Components.profile = {
     render(container, section, config) {
-      const div = document.createElement("div");
-      div.className = "section section-profile";
-      div.innerHTML = `
-        <div class="profile-wrapper">
-          <img src="${config.photo}" alt="profile" class="profile-picture" />
-        </div>
-        <div class="wish">
-          <h3 class="wish-hbd">${section.wishTitle || "Happy Birthday!"}</h3>
-          <h5 class="wish-text">${section.wishText || ""}</h5>
-        </div>
-      `;
+  const div = document.createElement("div");
+  div.className = "section section-profile";
+  div.innerHTML = `
+    <div class="profile-wrapper">
+      <img src="${section.photo || config.photo}" alt="profile" class="profile-picture" />
+    </div>
+    <div class="wish">
+      <h3 class="wish-hbd">${section.wishTitle || "Happy Birthday!"}</h3>
+      <h5 class="wish-text">${section.wishText || ""}</h5>
+    </div>
+  `;
+  // ...rest stays the same
       // Split wish title into spans for stagger animation
       const hbd = div.querySelector(".wish-hbd");
       hbd.innerHTML = hbd.textContent
@@ -29,7 +30,7 @@
       // Photo appears with gentle scale
       tl.from(el.querySelector(".profile-picture"), {
         duration: 0.8, scale: 0.5, opacity: 0, ease: "back.out(1.4)",
-      }, "-=2")
+      }, "+=0.4")
       // Wish title letters stagger in
       .from(el.querySelectorAll(".wish-hbd span"), {
         duration: 0.5, opacity: 0, y: -30,

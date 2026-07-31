@@ -54,6 +54,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const audio = document.querySelector(".song");
   if (audio && CONFIG.music) {
     audio.querySelector("source").src = CONFIG.music;
+    audio.volume = 0.3;
     audio.load();
   }
 

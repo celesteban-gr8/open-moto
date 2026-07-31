@@ -37,8 +37,8 @@
         }
       )
       .to(sparks, {
-        y: () => (Math.random() - 0.5) * window.innerHeight * 0.4,
-        x: () => (Math.random() - 0.5) * window.innerWidth * 0.4,
+        y: () => (Math.random() - 0.5) * window.innerHeight * 0.50,
+        x: () => (Math.random() - 0.5) * window.innerWidth * 0.50,
         opacity: 0, scale: 0, duration: 1.2,
         stagger: { each: 0.05, from: "random" },
         ease: "power2.out",

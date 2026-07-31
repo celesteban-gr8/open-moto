@@ -36,7 +36,7 @@
         { scale: 0, opacity: 0 },
         { scale: 1.2, opacity: 1, duration: 0.6, ease: "elastic.out(1, 0.5)" }
       )
-      .to(go, { scale: 0, opacity: 0, duration: 0.4 }, "+=1.5");
+      .to(go, { scale: 0, opacity: 0, duration: 0.4 }, "+=0.5");
     },
   };
 })();

@@ -42,7 +42,7 @@ const CONFIG = {
     },
     light: {
       background: "#86A788",      // Stone 50
-      text: "#571f49",            // Slate 800
+      text: "#571e49",            // Slate 800
     },
   },
 

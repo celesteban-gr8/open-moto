@@ -6,6 +6,7 @@
   const div = document.createElement("div");
   div.className = "section section-profile";
   div.innerHTML = `
+    ${section.banner ? `<img src="${section.banner}" alt="banner" class="profile-banner" />` : ""}
     <div class="profile-wrapper">
       <img src="${section.photo || config.photo}" alt="profile" class="profile-picture" />
     </div>
@@ -27,26 +28,33 @@
     },
 
     animate(tl, el) {
-      // Photo appears with gentle scale
-      tl.from(el.querySelector(".profile-picture"), {
-        duration: 0.8, scale: 0.5, opacity: 0, ease: "back.out(1.4)",
-      }, "+=0.4")
-      // Wish title letters stagger in
-      .from(el.querySelectorAll(".wish-hbd span"), {
-        duration: 0.5, opacity: 0, y: -30,
-        ease: "back.out(1.7)", stagger: 0.06,
-      })
-      // Color each letter
-      .to(el.querySelectorAll(".wish-hbd span"), {
-        color: "var(--primary)", duration: 0.4,
-        stagger: 0.04, ease: "none",
-      }, "-=0.3")
-      // Wish text fades in
-      .from(el.querySelector(".wish-text"), {
-        duration: 0.5, opacity: 0, y: 10,
-      }, "-=0.2");
-    },
+  // Banner appears first, above the photo
+  const banner = el.querySelector(".profile-banner");
+if (banner) {
+  tl.from(banner, {
+    duration: 0.8, opacity: 0, y: -40, ease: "power2.out",
+  });
+}
 
+  // Photo appears with gentle scale
+  tl.from(el.querySelector(".profile-picture"), {
+    duration: 0.8, scale: 0.5, opacity: 0, ease: "back.out(1.4)",
+  }, "+=0.6")
+  // Wish title letters stagger in          ← ADD THIS BLOCK BACK
+  .from(el.querySelectorAll(".wish-hbd span"), {
+    duration: 0.5, opacity: 0, y: -30,
+    ease: "back.out(1.7)", stagger: 0.06,
+  })
+  // Color each letter
+  .to(el.querySelectorAll(".wish-hbd span"), {
+    color: "var(--primary)", duration: 0.4,
+    stagger: 0.04, ease: "none",
+  }, "-=0.3")
+  // Wish text fades in
+  .from(el.querySelector(".wish-text"), {
+    duration: 0.5, opacity: 0, y: 10,
+  }, "-=0.2");
+},
     exit(tl, el) {
       tl.to(el, {
         duration: 0.6, opacity: 0, y: 20,

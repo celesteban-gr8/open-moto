@@ -197,7 +197,7 @@
     el._confettiStop = () => cancelAnimationFrame(rafId);
 
     el.style.display = "block";
-  });
+  }, null, "<");
 },
 
     exit(tl, el) {

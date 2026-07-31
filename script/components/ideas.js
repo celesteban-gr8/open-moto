@@ -46,7 +46,7 @@
         const strong = line.querySelector("strong");
         if (strong) {
           tl.to(strong, {
-            duration: 0.5, scale: 1.2, x: 10,
+            duration: 0.9, scale: 1, x: 8,
             backgroundColor: "var(--accent)", color: "#fff",
           });
         }

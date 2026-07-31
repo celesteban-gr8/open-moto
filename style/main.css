@@ -2,7 +2,7 @@
 :root {
   --primary: #f472b6;
   --accent: #60a5fa;
-  --bg: #A64D79;
+  --bg: #582b42;
   --text: #f1f5f9;
 }
 
@@ -40,7 +40,7 @@ body {
   top: 1rem;
   right: 1rem;
   z-index: 9999;
-  background: rgba(166, 77, 121);
+  background: rgb(90, 43, 66);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(128, 128, 128, 0.15);
@@ -129,7 +129,7 @@ body {
   width: 88%;
   position: relative;
   text-align: left;
-  background: rgba(166,77,121);
+  background: rgb(65, 30, 47);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
 }
@@ -347,6 +347,16 @@ body {
   border-radius: 50%;
   display: block;
   border: 3px solid rgba(128, 128, 128, 0.15);
+}
+
+.profile-banner {
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: clamp(400px, 90vw, 700px);
+  border-radius: 12px;
+  margin-bottom: 0;
 }
 
 .wish {

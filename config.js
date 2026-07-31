@@ -34,11 +34,11 @@ const CONFIG = {
   // ── Theme Colors ──────────────────────────────────────────────
   // A toggle button lets the viewer switch between dark & light mode.
   colors: {
-    primary: "#f472b6",           // Main accent color (rose pink)
-    accent: "#60a5fa",            // Secondary accent color (sky blue)
+    primary: "#f149a0",           // Main accent color (rose pink)
+    accent: "#571f49",            // Secondary accent color (sky blue)
     dark: {
-      background: "#FDB5CE",      // Slate 900
-      text: "#f1f5f9",            // Slate 100
+      background: "#f884ad",      // Slate 900
+      text: "#dfe3e7",            // Slate 100
     },
     light: {
       background: "#86A788",      // Stone 50
@@ -70,37 +70,36 @@ const CONFIG = {
     },
 
     {
-  type: "fireworks2",
-  count: 60,
-  bursts: 6,
-},
-
-    {
       type: "announcement",
       text: "It's your birthday!! :D",
+      type: "fireworks2",
+      count: 60,                   // Number of sparks per burst
+      burts: 24,                    // Number of bursts
     },
-    
+
     {
       type: "chatbox",
       message:
-        "Happy birthday to you baba!! I hope that your day fills with happiness and today reminds you of how loved, special you are. May this year not be so harsh on you!",
+        "Happy birthday baba!! I hope that your day fills with happiness and today reminds you of how loved, special you are. May this year not be so harsh on you!",
       buttonText: "Send",
     },
+
     {
       type: "ideas",
       lines: [
-        "That's what I was going to do.",
-        "But then I stopped.",
-        "I realised, I wanted to do something <strong>special</strong>.",
-        "For you because... ",
-        "You are Special <span>:)</span>",
+        "That's what i just wanna say to you but i thought that its kinda... plain.",
+        "Thats why I made this.",
+        "I realized, I wanted to do something <strong>special</strong>, <br>that no one has ever done to you and something that'll be memorable to you.",
+        "because... ",
+        "You are <strong>Special</strong> baba !<span>:)</span>",
       ],
       bigLetters: "SO",
     },
+
     {
       type: "quote",
-      text: "The more you praise and celebrate your life, the more there is in life to celebrate.",
-      author: "Oprah Winfrey",
+      text: "May today remind you that your presence has always been a gift, long before anyone wrapped one for you.",
+      author: "Cel",
     },
     {
       type: "stars",
@@ -110,13 +109,16 @@ const CONFIG = {
       type: "balloons",
       count: 25,
     },
+
     {
       type: "profile",
+      banner: "./img/banner.jpg",
+      wishTitle: "Happy Birthday!",
+      wishText: "I hope this birthday becomes one of those days that you'll look back on <br> and smile not because it was perfect, but because it felt special garod ;)",
     },
+
     {
       type: "confetti2",
-      wishTitle: "Happy Birthday!",
-      wishText: "May today remind you that your presence has always been a gift, long before anyone wrapped one for you -cel ;)",
     },
 
     {
@@ -127,6 +129,11 @@ const CONFIG = {
       type: "confetti",
       count: 9,
     },
+
+    {type: "balloons", count: 20
+
+    },
+
     {
       type: "closing",
       text: "I hope you like it baba hehe, labyow.",
